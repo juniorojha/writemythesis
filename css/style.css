@@ -315,7 +315,8 @@ footer a:hover {
   padding: 0 0 4px 0;
 }
 
-.form_settings span { 
+.form_settings span {
+	cursor:pointer; 
   float: left; 
   width: 200px; 
   text-align: left;
@@ -387,9 +388,9 @@ table {
 
 table tr th, table tr td { 
   background: #BBB;
-  color: #FFF;
+  color: #000000;
   padding: 7px 4px;
-  text-align: left;
+  text-align: center;
 }
   
 table tr td { 
@@ -561,3 +562,67 @@ ul#images li {
   height: 300px;
   list-style: none;
 }
+.slider{
+    overflow:hidden;
+    position:relative;
+    margin:0 0 4px;
+}
+.slider .slide{padding:15px;margin-bottom:3px;}
+.price-list .active .slide{display:block !important;}
+.price-list .title {
+    position: relative;
+    background: #fff;
+    border: 1px solid #839e99;
+    border-radius:5px;
+    padding:8px 11px;
+}
+.price-list .active .title:after, .price-list .active .title:before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.price-list .title span{
+    font-size:13px;
+    color:#2384d5;
+    text-decoration:underline;
+}
+.price-list .title span:hover{text-decoration:none;}
+.price-list .active .title:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: #fff;
+    border-width: 8px;
+    left: 19px;
+    margin-left: -9px;
+}
+.price-list .active .title:before {
+    border-color: rgba(131, 158, 153, 0);
+    border-top-color: #839e99;
+    border-width: 9px;
+    left: 19px;
+    margin-left: -10px;
+}
+.price-list .title span:before{
+    background: url(../images/sprite.png) no-repeat -374px 0;
+    width:13px;
+    height:13px;
+    content:'';
+    margin:3px 9px 0 0;
+    float:left;
+}
+.price-list .active .title span:before{
+    background: url(../images/sprite.png) no-repeat -387px 0;
+    width:13px;
+    height:13px;
+    content:'';
+    margin:3px 9px 0 0;
+    float:left;
+}
+.price-list .active .title span{color:#ff734f;}
+
+span
+{
+	cursor:pointer;}
